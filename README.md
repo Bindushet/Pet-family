@@ -28,16 +28,16 @@
 ```bash
 git clone https://github.com/your-username/pet-family.git
 cd pet-family
-
+---
 ### 2. Create a Virtual Environment
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-
+---
 ### 3.Install dependencies
 ```bash
 pip install -r requirements.txt
-
+---
 ### 4. Setup PostgreSQL Database
 Open pgAdmin4 and create a new database (e.g., petfamily_db)
 
@@ -56,5 +56,15 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+5. Run Migrations and Start Server
+```bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+
+6. Visit Your Site
+Open your browser and go to http://127.0.0.1:8000/ to explore the website.
+
 
 This project is for educational and personal use. Feel free to fork and modify as needed.
