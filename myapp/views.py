@@ -74,7 +74,7 @@ def adopt(request):
         )
         
         # email_msg = 
-        send_mail(subject, message,'bsshet04@gmail.com', [email])
+        send_mail(subject, message,'admin123@gmail.com', [email])
         # email_msg.send()
 
         return render(request, 'adopt.html',{'msg':'Thank you for your application. We have sent you an email confirmation!'})
@@ -107,4 +107,5 @@ def admin_home(request):
 
 def user_home(request):
     # J_data=request.session['username']
+
     return render(request,'user_home.html')
