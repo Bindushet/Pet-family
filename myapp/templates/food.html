@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food-Pet Family</title>
+
+    <!--font aweson cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!--coustom scc file-->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+
+</head>
+<body>
+    <!--header section starts-->
+    <header class="header">
+
+        <a href="user_home.html" class="logo"><i class="fas fa-paw"></i>Pet Family</a>
+
+        <nav class="navbar">
+            <a href="user_home.html">Home  of user</a>
+            <a href="adopt.html">Adopt</a>
+            <a href="food.html">Food</a>
+            <a href="shop.html">shop</a>
+            <a href="user_home.html">about</a>
+            <a href="user_home.html">contact</a>
+
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div> 
+            <a href="shop.html" class="fas fa-shopping-cart"></a>
+            <div class="fas fa-user" id="login-btn"></div> 
+        </div>
+
+        <!--<form action="" class="login-form">
+            <h3>sign out</h3>
+            <p>Username:{{ J_data }}</p>
+            <a href="index.html"><input type="submit" value="sign out"class="btn"></a>
+        <form action="" class="login-form">
+            <h3>sign in</h3>
+            <input type="email" name="" placeholder="enter your email" id="" class="box">
+            <input type="password" name="" placeholder="enter your password" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="sign in"class="btn">
+            
+            <div class="links">
+                <a href="#">forget password</a>
+                <a href="signup.html">sign up</a>
+                </div> 
+        </form>-->
+        <form action="{% url 'logout' %}" method="post" class="login-form">
+            {% csrf_token %}
+            <h3>sign out</h3>
+            <input type="submit" value="sign out" class="btn">
+        </form>
+    </header>
+<!--header section ends-->
+
+<!-- shop section starts -->
+
+<section class="shop" id="shop">
+
+    <h1 class="heading">Amazing <span>pet Foods</span> are </h1>
+<h2>Dog food</h2>
+    <div class="box-container">
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/food1.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/BADLANDS-RANCH-Premium-Superfood-Complete/dp/B0D18ZDHG2/ref=sr_1_1?adgrpid=1330411464104144&dib=eyJ2IjoiMSJ9.85KI2e_9PBLx9D3hzkCOVibzgalMiTkObXKQdiLYF4InspG2Cm7l8HgBoAdWVO91LQtSQsHycEzPn7nJd-Yfc_HXShLu88v9It38DFwh4SyAB4G7RfUvVMa6066RyJ1e9oCb60vmeuQaA02p_7Etc0JOC5_G6g7c4od62WbqWP5TxSIFEhQ21FCzttVoElyD8_aKNWWjCbXvMK2KXU3TS4J3hXg3hsMx6lpl1zhTP9WzXTuWUAjJUkM6MPNG9U-wvaexpyZ9n95p-po1X7Tf-caMePTvVA3bQu5wYEkgSmw.vM8TWH2-zrSpJCHZMzE5fN_uwkJrX51fMYhKgxZL0NA&dib_tag=se&hvadid=83150979175368&hvbmt=bb&hvdev=c&hvlocphy=116072&hvnetw=o&hvqmt=b&hvtargid=kwd-83151757193788%3Aloc-90&hydadcr=7880_13584070&keywords=badlands+ranch+food+for+dogs&msclkid=25ee7aef62e814d982371d89bcf7428a&qid=1734794788&sr=8-1">4 oz. Premium Chicken, 24 oz. Premium Beef, 24 oz. Lamb & Venison Superfood Complete Bundle</a>
+                <p>Contains premium beef, premium chicken or lamb and venison, gut healthy vegetables and superfoods chosen to help support your dog’s smooth digestion and healthy vitality.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/food2.webp" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/Blue-Buffalo-Protection-Formula-Adult/dp/B0009YWKUA/ref=sr_1_5?adgrpid=1330411464104144&dib=eyJ2IjoiMSJ9.85KI2e_9PBLx9D3hzkCOVibzgalMiTkObXKQdiLYF4InspG2Cm7l8HgBoAdWVO91LQtSQsHycEzPn7nJd-Yfc_HXShLu88v9It38DFwh4SyAB4G7RfUvVMa6066RyJ1e9oCb60vmeuQaA02p_7Etc0JOC5_G6g7c4od62WbqWP5TxSIFEhQ21FCzttVoElyD8_aKNWWjCbXvMK2KXU3TS4J3hXg3hsMx6lpl1zhTP9WzXTuWUAjJUkM6MPNG9U-wvaexpyZ9n95p-po1X7Tf-caMePTvVA3bQu5wYEkgSmw.vM8TWH2-zrSpJCHZMzE5fN_uwkJrX51fMYhKgxZL0NA&dib_tag=se&hvadid=83150979175368&hvbmt=bb&hvdev=c&hvlocphy=116072&hvnetw=o&hvqmt=b&hvtargid=kwd-83151757193788%3Aloc-90&hydadcr=7880_13584070&keywords=badlands%2Branch%2Bfood%2Bfor%2Bdogs&msclkid=25ee7aef62e814d982371d89bcf7428a&qid=1734794990&sr=8-5&th=1">Blue Buffalo Life Protection Formula Adult Dry Dog Food,</a>
+                <p>Helps Build and Maintain Strong Muscles, Made with Natural Ingredients, Chicken & Brown Rice Recipe, 30-lb. Bag</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/food3.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/dp/B00LPDI34Q?ref=emc_s_m_5_i_atc&th=1">ZIWI Peak Air-Dried Dog Food - Beef</a>
+                <p>All Natural, High Protein, Grain Free, Limited Ingredient w/ Superfoods (16oz).</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/food4.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/dp/B0CV64VG52?ref=emc_s_m_5_i_atc&th=1">Ziwi Peak Steam & Dried Dog Food - Grass-fed Beef w/Pumpkin</a>
+                <h4>High Protein, Low Carb, All Breeds & Lifestages, for Digestive Health (28.8oz)</h4>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/food5.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/HillS-Science-Diet-Chicken-Recipe/dp/B003CL3PTM/ref=sr_1_8?crid=2T5X4L5W72T8J&dib=eyJ2IjoiMSJ9.a-ZgwCGxzATVGMINPhDRed6fpOeaG-bfzr-hIpPWM8m3KSp3eTzXoVeCzaUBCHsVlMb_4THo5lRK2nKCsRTlhsKu85txUebTFnfCQLJeniZx2lqqX8kEbsAC8QThbEzBbAdYp-r9lLcEpMrPszu3K3lsb0qxSWEjWUUYKzU0_BlhLJ584sRRpj22vdPdjYc9SwvUEIlfW9Iuf3lqS7HFWcCheP7lmLMxeO2molc3d4nptVCeLrS9Zr89MYYj4uedRp0HmWZB0Go2Hy6DXLtYoQkeTegFQ7YkCTgOfYhmbH7KK-gOySZf6DUKb6X1MceOIMPrC-Aqd8orqf9qh11NpNpC-aBBPctX3aonMuGNBw5QOoLPiomZKT9_a7y79k0EDC9GSAlyfoxX1M6OmDk145kW_hPGlgwH4rjRlBqvWyhi6N46VwiIHoNu70_tB_g3.7XpBT4EMEv5GVTlw__ScxVM1haOMyJVPToijef1Jfo8&dib_tag=se&keywords=pet+food&qid=1734795545&sprefix=pet+foo%2Caps%2C544&sr=8-8">Hill's Science Diet Small & Mini, Adult 1-6, Small & Mini Breeds Premium Nutrition, Dry Dog Food, Chicken & Brown Rice, 4.5 lb Bag</a>
+                <p>Made with highly digestible ingredients that are easy on your small dog's stomach.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/food6.webp" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/Instinct-Mixers-Freeze-Functional-Ingredients/dp/B0BNJS85FM/ref=sr_1_12?crid=2T5X4L5W72T8J&dib=eyJ2IjoiMSJ9.XNv8Ebw4qBecO0siZ7LCal3p6rtSpw7kq6RV_T6FjZ-upJ-huKx-a2FH-yPo4-8fJ4Med92Y9RxF-nV5nqmmiPnHTQxKik9gblcmxMnvkIMniGX5FATVrVygRuh6uMlbeZ1FRl0OgXUjXN-RlA7xcaEo2UPDxO--ufLwVrFUrOf-dOEfDWx39c4E2z0thWfIvZOOjReot40PC8D5XvyK7Q81UsImR5RB0sNer2vfLZROtBTleWb6YHxmcG47Ffuud1BKLTTPioV0zN86l5-lqKO-MMTOxvq4_T16i8WLwzmKKSb1PR7mNqc9r-UldhziIMPrC-Aqd8orqf9qh11NpGCcROpevV8ws2F2-eyOqE_cpUEAZMEhIGnP6td92HaLg2sQfT02MS7Iw-sFMhR4bzc0c8txKh0XtvYinp2QuEtTz0oyHFz82nfHK90a1iN8.ZYRV1srreBsxzCfOLjHTDUcdT_ssUgVkgci0-Fe_TfU&dib_tag=se&keywords=pet%2Bfood&qid=1734796067&sprefix=pet%2Bfoo%2Caps%2C544&sr=8-12&th=1">Instinct Raw Boost Mixers Freeze Dried Dog Food Toppers For Dry Food, Grain Free Dog Food Toppers with Beef For Dogs</a>
+                <p>MULTIVITAMIN FOR ADULT DOGS: Enhance your dog's overall health with science-backed, freeze dried dog food toppers. Packed with grass-fed beef and 27 guaranteed nutrients, this healthy and delicious dog food topper improves overall health for dogs.</p>
+            </div>
+        </div>
+<!-- <h2>Cat food</h2> -->
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/cat_food1.webp" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/Hartz-Delectables-Complete-Balanced-Lickable/dp/B0DGJKHZ46/ref=sr_1_1_sspa?crid=26T7JVMQ9X4SL&dib=eyJ2IjoiMSJ9.KawN8pjjcTmPUAXI3XT9oQicE2a0cTm10s9JJh2lfjTy0kHdQO1lzWDD8efxXiTziFPkAZNTSif0HI_x-t0--0ZLeAsFYNpUySB5R3HEUiabYTbOrTKD9A1RXG2vbbEr83o_RVU7O2kWasGkRH0nQooIXeuPVvOF-9CgOi3pkGkXLlAAWhViWrXHOPWleH9h-JF66iOHqU-m_bdaLW0YPcUglckgHfHSe6LGiMQ-rKBsjRlQ8MZFfkbHKlbmpL-LtTgHJG1-MiAaorDEFFL8TKXnlSxVWhS_K0qus613KuA.MnpDiMN9nUpSinQs2OBNXc6VLvb4AZg3ntmMI7gp-8o&dib_tag=se&keywords=cat%2Bfood&qid=1734796467&sprefix=cat%2Bfood%2Caps%2C368&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1">Hartz Delectables Bisque for Kittens, Complete & Balanced Tuna & Salmon Cat Wet Lickable Treats, 12 Count</a>
+                <p>NUTRITIONALLY COMPLETE & BALANCED FOR KITTENS: Made with nutrients found in mother’s milk, without any fillers, by-products, or added preservatives</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/cat-food2.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/Purina-Friskies-Gravy-Swirlers-Adult/dp/B0727R5C5Q/ref=sr_1_2?crid=26T7JVMQ9X4SL&dib=eyJ2IjoiMSJ9.KawN8pjjcTmPUAXI3XT9oQicE2a0cTm10s9JJh2lfjTy0kHdQO1lzWDD8efxXiTziFPkAZNTSif0HI_x-t0--0ZLeAsFYNpUySB5R3HEUiabYTbOrTKD9A1RXG2vbbEr83o_RVU7O2kWasGkRH0nQooIXeuPVvOF-9CgOi3pkGkXLlAAWhViWrXHOPWleH9h-JF66iOHqU-m_bdaLW0YPcUglckgHfHSe6LGiMQ-rKBsjRlQ8MZFfkbHKlbmpL-LtTgHJG1-MiAaorDEFFL8TM7qdQI2u6pMQhTr205_liIJSuF0ciluPDdRvEtpw3Rvx65_oiOXGMioIYDAay-Ks61YacvmM7IieA-ljUzfZe_zu0pTaFsPG_aIb2b68UNXdsjtn-2cl-lXVwHVgLNt0VAwwlRO58SG6e4-UIBl0IpkrN1_mQHgidKFDDgUDRSn.zGQRgHuPGGNIg5JPVUJhFEWA6Puo82IWU8ayOunRS7o&dib_tag=se&keywords=cat%2Bfood&qid=1734796586&sprefix=cat%2Bfood%2Caps%2C368&sr=8-2&th=1">Purina Friskies Dry Cat Food, Gravy Swirlers - 3.15 lb. Bag</a>
+                <p>Tempting texture entices her to her dish. 100 percent complete and balanced nutrition formulated for all life stages</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/cat-food3.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/Science-Diet-Optimal-Chicken-Recipe/dp/B009B87SAC/ref=sr_1_4?crid=26T7JVMQ9X4SL&dib=eyJ2IjoiMSJ9.KawN8pjjcTmPUAXI3XT9oQicE2a0cTm10s9JJh2lfjTy0kHdQO1lzWDD8efxXiTziFPkAZNTSif0HI_x-t0--0ZLeAsFYNpUySB5R3HEUiabYTbOrTKD9A1RXG2vbbEr83o_RVU7O2kWasGkRH0nQooIXeuPVvOF-9CgOi3pkGkXLlAAWhViWrXHOPWleH9h-JF66iOHqU-m_bdaLW0YPcUglckgHfHSe6LGiMQ-rKBsjRlQ8MZFfkbHKlbmpL-LtTgHJG1-MiAaorDEFFL8TM7qdQI2u6pMQhTr205_liIJSuF0ciluPDdRvEtpw3Rvx65_oiOXGMioIYDAay-Ks61YacvmM7IieA-ljUzfZe_zu0pTaFsPG_aIb2b68UNXdsjtn-2cl-lXVwHVgLNt0VAwwlRO58SG6e4-UIBl0IpkrN1_mQHgidKFDDgUDRSn.zGQRgHuPGGNIg5JPVUJhFEWA6Puo82IWU8ayOunRS7o&dib_tag=se&keywords=cat%2Bfood&qid=1734796586&sprefix=cat%2Bfood%2Caps%2C368&sr=8-4&th=1">Hill's Science Diet Adult 1-6, Adult 1-6 Premium Nutrition, Dry Cat Food, Chicken Recipe, 7 lb Bag</a>
+                <p>High quality protein for lean muscles,Omega-6s and vitamin E for beautiful skin & coat</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/cat-food4.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/Kitzy-Canned-Chicken-Added-Grain/dp/B08JMY25J4/ref=sr_1_14_ffob_sspa?crid=26T7JVMQ9X4SL&dib=eyJ2IjoiMSJ9.KawN8pjjcTmPUAXI3XT9oQicE2a0cTm10s9JJh2lfjTy0kHdQO1lzWDD8efxXiTziFPkAZNTSif0HI_x-t0--0ZLeAsFYNpUySB5R3HEUiabYTbOrTKD9A1RXG2vbbEr83o_RVU7O2kWasGkRH0nQooIXeuPVvOF-9CgOi3pkGkXLlAAWhViWrXHOPWleH9h-JF66iOHqU-m_bdaLW0YPcUglckgHfHSe6LGiMQ-rKBsjRlQ8MZFfkbHKlbmpL-LtTgHJG1-MiAaorDEFFL8TKXnlSxVWhS_K0qus613KuA.MnpDiMN9nUpSinQs2OBNXc6VLvb4AZg3ntmMI7gp-8o&dib_tag=se&keywords=cat%2Bfood&qid=1734796586&sprefix=cat%2Bfood%2Caps%2C368&sr=8-14-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&psc=1">Amazon Brand - Kitzy Wet Cat Food, Chicken cuts in Gravy, Grain Free (Kitten), 3 ounce (Pack of 24)</a>
+                <p>REAL CHICKEN FIRST: Real meat is the first ingredient in this Kitzy Wet Cat Food for kittens</p>
+            </div>
+        </div>
+
+        
+    </div>
+
+</section>
+
+
+
+<!-- <footer>
+    <h3>&copy; 2024 Your Pet Family.All rights reserved.</h3>
+</footer> -->
+
+    <!--customs js file link-->
+    <script src="../static/js/script.js"></script>
+</body>
+</html>

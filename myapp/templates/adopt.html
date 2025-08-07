@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adopt now</title>
+
+    <!--font aweson cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--coustom scc file-->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+
+</head>
+<body>
+    <!--header section starts-->
+    <header class="header">
+
+        <a href="user_home.html" class="logo"><i class="fas fa-paw"></i>Pet Family</a>
+
+        <nav class="navbar">
+            <a href="user_home.html">Home  of user</a>
+            <a href="adopt.html">Adopt</a>
+            <a href="food.html">Food</a>
+            <a href="shop.html">shop</a>
+            <a href="user_home.html">about</a>
+            <a href="user_home.html">contact</a>
+
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div> 
+            <a href="shop.html" class="fas fa-shopping-cart"></a>
+            <div class="fas fa-user" id="login-btn"></div> 
+        </div>
+
+        <!--<form action="" class="login-form">
+            <h3>sign out</h3>
+            <p>Username:{{ J_data }}</p> 
+            <a href="index.html"><input type="submit" value="sign out"class="btn"></a>
+        <form action="" class="login-form">
+            <h3>sign in</h3>
+            <input type="email" name="" placeholder="enter your email" id="" class="box">
+            <input type="password" name="" placeholder="enter your password" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="sign in"class="btn">
+            
+            <div class="links">
+                <a href="#">forget password</a>
+                <a href="signup.html">sign up</a>
+                </div> 
+        </form>-->
+        <form action="{% url 'logout' %}" method="post" class="login-form">
+            {% csrf_token %}
+            <h3>sign out</h3>
+            <input type="submit" value="sign out" class="btn">
+        </form>
+    </header>
+
+<!-- adopt section starts -->
+<div class="alert alert-success">
+    {{msg}}</div>
+<section class="adopt">
+    <div class="pet-cards" >
+        <div class="pet-card">
+            <div class="image">
+                <img src="../static/resource/image/pug-dog.png" alt="Featured Pet 1">
+            </div>
+            <div class="content">
+                <h3>Hulfy</h3>
+                <p>Pug Dog</p>
+                <a href="#Adopt_id" class="btn">Adopt Me</a>
+            </div>
+        </div>
+        <div class="pet-card">
+            <div class="image">
+                <a href="#"><img src="../static/resource/image/siamese-cat.png" alt="Featured Pet 2"></a>
+            </div>
+            <div class="content">
+                <h3>Loafy</h3>
+                <p>Siamese Cat</p>
+                <a href="#Adopt_id" class="btn">Adopt Me</a>
+            </div>
+        </div>
+        <div class="pet-card">
+            <div class="image">
+                <a href="#"><img src="../static/resource/image/orange-cat.png" alt="Featured Pet 3"></a>
+            </div>
+            <div class="content">
+                <h3>Simba</h3>
+                <p>Persian Cat</p>
+                <a href="#Adopt_id" class="btn">Adopt Me</a>
+            </div>    
+        </div>
+        <div class="pet-card">
+            <div class="image">
+                <a href="#"><img src="../static/resource/image/australian.jpeg" alt="Featured Pet 3"></a>
+            </div>
+            <div class="content">
+                <h3>saddy</h3>
+                <p>Australian shepherd</p>
+                <a href="#Adopt_id" class="btn">Adopt Me</a>
+            </div>    
+        </div>
+        <div class="pet-card">
+            <div class="image">
+                <a href="#"><img src="../static/resource/image/beagle.jpeg" alt="Featured Pet 3"></a>
+            </div>
+            <div class="content">
+                <h3>daisy</h3>
+                <p>begel dog</p>
+                <a href="#Adopt_id" class="btn">Adopt Me</a>
+            </div>    
+        </div>
+        <div class="pet-card">
+            <div class="image">
+                <a href="#"><img src="../static/resource/image/boxer.jpeg" alt="Featured Pet 3"></a>
+            </div>
+            <div class="content">
+                <h3>rocky</h3>
+                <p>boxer dog</p>
+                <a href="#Adopt_id" class="btn">Adopt Me</a>
+            </div>    
+        </div>
+        <div class="pet-card">
+            <div class="image">
+                <a href="#"><img src="../static/resource/image/gold-ret.jpeg" alt="Featured Pet 3"></a>
+            </div>
+            <div class="content">
+                <h3>luna</h3>
+                <p>golden retriever</p>
+                <a href="#Adopt_id" class="btn">Adopt Me</a>
+            </div>    
+        </div>
+        
+        <div class="pet-card">
+            <div class="image">
+                <a href="#"><img src="../static/resource/image/bengal.jpeg" alt="Featured Pet 3"></a>
+            </div>
+            <div class="content">
+                <h3>milo</h3>
+                <p>Bengal Cat</p>
+                <a href="#Adopt_id" class="btn">Adopt Me</a>
+            </div>    
+        </div>
+        <div class="pet-card">
+            <div class="image">
+                <a href="#"><img src="../static/resource/image/gmnshprd.jpeg" alt="Featured Pet 3"></a>
+            </div>
+            <div class="content">
+                <h3> max</h3>
+                <p>german shepherd</p>
+                <a href="#Adopt_id" class="btn">Adopt Me</a>
+            </div>    
+        </div>
+    </div>
+</section>
+
+<section class="adopt-form" id="Adopt_id">
+    <h2>Adoption Application</h2>
+    <form action="{% url 'adopt' %}" method="post" >
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" class="indata" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="indata" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="number" id="contact" name="contact" class="indata" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" class="indata"  required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="pet-type">Type of Pet</label>
+            <select id="pet-type" name="type" class="indata"   required>
+                <option value="">Select a pet type</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="reason">Reason for Adoption</label>
+            <textarea id="reason" name="reason" class="indata" required></textarea>
+        </div>
+        <button type="submit" class="btn">Submit Application</button>
+    </form>
+</section>
+<!-- about section ends -->
+
+<!--footer>
+    <h3>&copy; 2024 Your Pet Family.All rights reserved.</h3>
+</footer---->
+
+    <!--customs js file link-->
+    <script src="../static/js/script.js"></script>
+</body>
+</html>

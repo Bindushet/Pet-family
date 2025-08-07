@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Family</title>
+
+    <!--font aweson cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!--coustom scc file-->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+
+</head>
+<body>
+    <!--header section starts-->
+    <header class="header">
+
+        <a href="index.html" class="logo"><i class="fas fa-paw"></i>Pet Family</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home of admin</a>
+            <a href="adopt.html">Adopt</a>
+            <a href="food.html">Food</a>
+            <a href="shop.html">shop</a>
+            <a href="#about">about</a>
+            <a href="#contact">contact</a>
+
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div> 
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <div class="fas fa-user" id="login-btn"></div> 
+        </div>
+        <!-- <form action="" class="login-form">
+            <h3>sign out</h3>
+            <p>Username:{{ J_data }}</p>
+            <input type="submit" value="sign out"class="btn">
+        <form action="" class="login-form">
+            <h3>sign in</h3>
+            <input type="email" name="" placeholder="enter your email" id="" class="box">
+            <input type="password" name="" placeholder="enter your password" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="sign in"class="btn">
+            
+            <div class="links">
+        
+                <a href="index.html">Sign out</a>
+                </div>
+        </form> -->
+        <form action="{% url 'logout' %}" method="post" class="login-form">
+            {% csrf_token %}
+            <h3>sign out</h3>
+            <input type="submit" value="sign out" class="btn">
+        </form>
+    </header>
+<!--header section ends-->
+
+<!-- home section starts -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3> <span>hi</span> welcome to our pet family</h3>
+        <a href="adopt.html" class="btn">adopt now</a>
+    </div>
+
+    <!-- <img src="resource/image/waveimage.png" class="wave"alt=""> -->
+
+</section>
+
+<!-- home section ends -->
+<section class="tablecss">
+    <!--<p>Data: {{ adata }}</p>
+  <table style="width: 100%;" >
+    <thead >
+    <tr>
+      <th>Id</th>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>Contact</th>
+      <th>Address</th>
+      <th>Type</th>
+      <th>Reason</th>
+    </tr>
+    </thead>
+    <tbody >
+      {% for r in adata %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ r.fullname }}</td>
+        <td>{{ r.email }}</td>
+        <td>{{ r.contact }}</td>
+        <td>{{ r.address }}</td>
+        <td>{{ r.type }}</td>
+        <td>{{ r.reason }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table> 
+  {% for entry in adata %}
+    <p>{{ entry.fullname }}</p>
+    <p>{{ entry.email }}</p>
+    <p>{{ entry.contact }}</p>
+    <p>{{ entry.address }}</p>
+    <p>{{ entry.type }}</p>
+    <p>{{ entry.reason }}</p>
+{% endfor %}
+{% if adata %}
+    <ul>
+        {% for entry in adata %}
+            <li><strong>Full Name:</strong> {{ entry.fullname }}</li>
+            <li><strong>Email:</strong> {{ entry.email }}</li>
+            <li><strong>Contact:</strong> {{ entry.contact }}</li>
+            <li><strong>Address:</strong> {{ entry.address }}</li>
+            <li><strong>Type:</strong> {{ entry.type }}</li>
+            <li><strong>Reason:</strong> {{ entry.reason }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No adoption data available.</p>
+{% endif %}-->
+<ul>
+    {% for entry in adata %}
+        <li>{{ entry.fullname }}</li>
+    {% endfor %}
+</ul>
+
+</section>
+
+
+<footer>
+    <h3>&copy; 2024 Your Pet Family.All rights reserved.</h3>
+</footer>
+
+    <!--customs js file link-->
+    <script src="../static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Shop Pet Family</title>
+
+    <!--font aweson cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!--coustom scc file-->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+
+</head>
+<body>
+    <!--header section starts-->
+    <header class="header">
+
+        <a href="user_home.html" class="logo"><i class="fas fa-paw"></i>Pet Family</a>
+
+        <nav class="navbar">
+            <a href="user_home.html">Home  of user</a>
+            <a href="adopt.html">Adopt</a>
+            <a href="food.html">Food</a>
+            <a href="shop.html">shop</a>
+            <a href="user_home.html">about</a>
+            <a href="user_home.html">contact</a>
+
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div> 
+            <a href="shop.html" class="fas fa-shopping-cart"></a>
+            <div class="fas fa-user" id="login-btn"></div> 
+        </div>
+
+        <!-- <form action="" class="login-form">
+            <h3>sign out</h3>
+            <p>Username:{{ J_data }}</p>
+            <a href="index.html"><input type="submit" value="sign out"class="btn"></a>
+        <form action="" class="login-form">
+            <h3>sign in</h3>
+            <input type="email" name="" placeholder="enter your email" id="" class="box">
+            <input type="password" name="" placeholder="enter your password" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="sign in"class="btn">
+            
+            <div class="links">
+                <a href="#">forget password</a>
+                <a href="signup.html">sign up</a>
+                </div>
+        </form>-->
+        <form action="{% url 'logout' %}" method="post" class="login-form">
+            {% csrf_token %}
+            <h3>sign out</h3>
+            <input type="submit" value="sign out" class="btn">
+        </form>
+    </header>
+<!--header section ends-->
+
+<!-- shop section starts -->
+
+<section class="shop" id="shop">
+
+    <h1 class="heading"><span>pet products</span> are </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/product01.png" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.in/Depets-Cleaning-Slicker-Grooming-Shedding/dp/B08FJ655HL/ref=sr_1_5?crid=LLO2FN33NPNT&dib=eyJ2IjoiMSJ9.zLdirUUQjKQSBJNFRhp-e5kICs2Km-rIvJNbXO1oHTC4_7qsvO6R_voXWGUFHlqE6b1stiH4kAdkTbhvTj7iEnxRFgFCFMetse5sMJ--aJwf9m-nJ7nGcXKXQ6SBvVLrIxaSK2Vfb0Q6JODLFdUpINfmMdW2W5YevsqX2GFVM_HNxfLiF3Hm03LOhKsleup6EiUfOT95O9ImuOTKqz-mSYDF35R1DEaE71Kg6COyYNZC9s_4OkQ3YdadB5qzEnUEe1Jksb-uoES9hSedMxlxl0bDf1sncNMZRHKIJRI6HO4.NN-Yq2luU9i8frXR9yaeeOxl0sN72B71VQkB1QucXpI&dib_tag=se&keywords=pet&qid=1734543854&sprefix=pet+%2Caps%2C290&sr=8-5">Depets Self Cleaning Slicker Brush, Pet Grooming Shedding Brush for Dogs and Cats </a>
+                <p>Easy to Remove Loose Undercoat, Pet Massaging Tool Suitable for Pets with Long or Short Hair Color May Vary</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/product02.png" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.in/ZOIVANE-Grooming-Labrador-Shepherd-Retriever/dp/B0C9KX3YWG/ref=sr_1_16?crid=LLO2FN33NPNT&dib=eyJ2IjoiMSJ9.zLdirUUQjKQSBJNFRhp-e5kICs2Km-rIvJNbXO1oHTC4_7qsvO6R_voXWGUFHlqE6b1stiH4kAdkTbhvTj7iEnxRFgFCFMetse5sMJ--aJwf9m-nJ7nGcXKXQ6SBvVLrIxaSK2Vfb0Q6JODLFdUpINfmMdW2W5YevsqX2GFVM_HNxfLiF3Hm03LOhKsleup6EiUfOT95O9ImuOTKqz-mSYDF35R1DEaE71Kg6COyYNZC9s_4OkQ3YdadB5qzEnUEe1Jksb-uoES9hSedMxlxl0bDf1sncNMZRHKIJRI6HO4.NN-Yq2luU9i8frXR9yaeeOxl0sN72B71VQkB1QucXpI&dib_tag=se&keywords=pet&qid=1734543854&sprefix=pet+%2Caps%2C290&sr=8-16">ZOIVANE Dog Bath Brush</a>
+                <p>Soft Silicone Bristles Pet Grooming/Bathing & Massage Brushes | Dog & Cat Accessories | Labrador, German Shepherd, Golden Retriever | Shampoo Dispenser Washing Brush-Pack of 1</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/product3.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.in/Himalaya-Improves-Irritation-Eucalyptus-Effective/dp/B073RVF88P/ref=sr_1_39?crid=LLO2FN33NPNT&dib=eyJ2IjoiMSJ9.zLdirUUQjKQSBJNFRhp-e5kICs2Km-rIvJNbXO1oHTC4_7qsvO6R_voXWGUFHlqE6b1stiH4kAdkTbhvTj7iEnxRFgFCFMetse5sMJ--aJwf9m-nJ7nGcXKXQ6SBvVLrIxaSK2Vfb0Q6JODLFdUpINfmMdW2W5YevsqX2GFVM_HNxfLiF3Hm03LOhKsleup6EiUfOT95O9ImuOTKqz-mSYDF35R1DEaE71Kg6COyYNZC9s_4OkQ3YdadB5qzEnUEe1Jksb-uoES9hSedMxlxl0bDf1sncNMZRHKIJRI6HO4.NN-Yq2luU9i8frXR9yaeeOxl0sN72B71VQkB1QucXpI&dib_tag=se&keywords=pet&qid=1734543854&sprefix=pet+%2Caps%2C290&sr=8-39">Himalaya Erina Ep Shampoo For Dogs And Cats</a>
+                <p>Himalaya Erina-EP Shampoo is an ectoparasitic repellent shampoo for pets that is effective in management of ticks, lice, and fleas.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/pet-eye-spary.png" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/Vetericyn-Animals-Relieve-Irritation-Discharge/dp/B0040ZYDVS/ref=sr_1_5?adgrpid=1342504717528427&dib=eyJ2IjoiMSJ9.VaDNM7sABlExQ2Hy62XbLspj13GTjrSFhfwDRaONQPgtOqqG6F-irX8RkWTcnqSVnD2kL2aiCVGnYwj7P43RQ4X9VhGz2Yh2dJdwFEKIVYRVGT_ngOXzhYThvRvp7ql2NHnroXzpoP-ySJ-WK4ksGVjJmFcFZLz3J_LI9cyujuHOWrilMipw3OUYYuR3h_QX-JP08wA9qSP1gJkmMLDtAY7vWA3_ZmUMEMgHQxfMYUJIA-5_VSc2gEvj6YwHMvYl8eUZs_uSssu8hYmJmE14tzcpuQ9jg0Fnm_EgkLgUnlEoH81DfBEaWkYBL0yLEeoWD5Vs__fKlHBk1sVO2ci8xeBC1O7J6ohIpqTyAOwJf5Fr3OguK5dhg9ot5g6wR9CZNCtgTUHKfqY5s5IY6FBWM4ohyXPhskl5E8ROPSF39-p4-KV4GYdFcQgHeAZBOf8t.FQnpwtijkc3mcm0vkUWmyBows9e5Pnj0puSHuOpdL1s&dib_tag=se&hvadid=83906795512734&hvbmt=bb&hvdev=c&hvlocphy=116072&hvnetw=o&hvqmt=b&hvtargid=kwd-83907208472555%3Aloc-90&hydadcr=10638_13501601&keywords=eye+drops+for+dog+conjunctivitis&qid=1734714681&sr=8-5">Vetericyn Plus Livestock Pink Eye Spray</a>
+                <h4>Conjunctivitis Relief for Animals, Safe and Non-Toxic Formula to Relieve Redness, Irritation, and Discharge. 16 Ounces</h4>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/pet_drops.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/Cataract-Improve-Vision-Clarity-Cataracts/dp/B0D3TFTDD4/ref=sr_1_1_sspa?adgrpid=1342504717528427&dib=eyJ2IjoiMSJ9.VaDNM7sABlExQ2Hy62XbLspj13GTjrSFhfwDRaONQPgtOqqG6F-irX8RkWTcnqSVnD2kL2aiCVGnYwj7P43RQ4X9VhGz2Yh2dJdwFEKIVYRVGT_ngOXzhYThvRvp7ql2NHnroXzpoP-ySJ-WK4ksGVjJmFcFZLz3J_LI9cyujuHOWrilMipw3OUYYuR3h_QX-JP08wA9qSP1gJkmMLDtAY7vWA3_ZmUMEMgHQxfMYUJIA-5_VSc2gEvj6YwHMvYl8eUZs_uSssu8hYmJmE14t7naH7JC5hrLqi1VwK4m18g.zlOmpuwkB5BGYriRWsvN8KISmExhObcOj8Fi_yPETqc&dib_tag=se&hvadid=83906795512734&hvbmt=bb&hvdev=c&hvlocphy=116072&hvnetw=o&hvqmt=b&hvtargid=kwd-83907208472555%3Aloc-90&hydadcr=10638_13501601&keywords=eye+drops+for+dog+conjunctivitis&qid=1734714807&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">Cataract Drops for Dogs, Dog Eye Drops, Improve Vision Clarity, Improve Eye Vision and Cataracts(2 x 10 mL)</a>
+                <p>Our dog eye drops can help pets relieve symptoms of eye cloudiness or redness and inflammation, help reduce eye cloudiness and improve and protect vision, Protects the health of your pet's eyes.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/pet-poop-bag.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/Cleaner-Washer-Buddy-Medium-absorbent/dp/B09WYVX474/ref=sr_1_11?crid=3OS9CPW392S5H&dib=eyJ2IjoiMSJ9.z_KBo583vdxHQ6diKykPB6Q5CbaN5546HbPpQ7lwvJmNtGgYQC0kznxqApq7gFtanyFNKA1x0bbt45Gj67IHJOfjbswcjzYjgKyDQh6edS1Ctuvg2vQkfj5pLZHraTep3PHBUMNceoPb1VDgGwQ0oxlSoPwMHj4V241rd45rFnm3rg9b1n_81BK0LutOdATvNFdIWyxFAVoetF3IgDaS9yy3xtjmSis-4K97huz6gUU.itMQoNJUsZUIHnvmC7zQmMvhqymztHL3DUTVivtn83I&dib_tag=se&keywords=pet&qid=1734714862&sprefix=pet%2B%2Caps%2C524&sr=8-11&th=1">Dog Paw Cleaner, Washer, Buddy Muddy Pet Foot Cleaner for Small Medium Large Breed Dogs/Cats (with 3 absorbent towel)</a>
+                <p>Just use paw cleaner for dogs, you don't need to fix the dog's paws, also it can suitable for other pet, as cat.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/pet-water.webp" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/Veken-Fountain-Automatic-Dispenser-Replacement/dp/B08NC54VZN/ref=sr_1_16?crid=25YMBZZBZCW1W&dib=eyJ2IjoiMSJ9.z_KBo583vdxHQ6diKykPB6Q5CbaN5546HbPpQ7lwvJmNtGgYQC0kznxqApq7gFtanyFNKA1x0bbt45Gj67IHJOfjbswcjzYjgKyDQh6edS1Ctuvg2vQkfj5pLZHraTep3PHBUMNceoPb1VDgGwQ0oxlSoPwMHj4V241rd45rFnm3rg9b1n_81BK0LutOdATvNFdIWyxFAVoetF3IgDaS9yy3xtjmSis-4K97huz6gUU.itMQoNJUsZUIHnvmC7zQmMvhqymztHL3DUTVivtn83I&dib_tag=se&keywords=pet&qid=1734714909&sprefix=pe%2Caps%2C586&sr=8-16">Veken 95oz/2.8L Pet Fountain</a>
+                <p>Automatic Cat Water Fountain Dog Water Dispenser with Replacement Filters for Cats, Dogs, Multiple Pets (Blue, Plastic</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/pet-ball.webp" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/PetDroid-Interactive-Activated-Automatic-Rechargeable/dp/B08C9PHWFC/ref=sr_1_17?crid=A85A5RTRXD1O&dib=eyJ2IjoiMSJ9.q_TBxqcEcizh0tt51KwcBUGl4EC7WurghKIVtTdMkeXkA9F2JXUTG-jg3TtlsAwLOhZQBkcXg_Rnau8Um6-VrffBRFPPNAWqUMMPhe1ep1-IiBw_uE3lP4V43l6YIRGVAYPp0EfCAOU-jQDLqPmuFmDjgxD212l-4tSFS8ZSgSQ308GUpn1EpYiwBd1s2jr-wE004svan9VDdjYitCAQkKC3c8dm6_9pIQ1-w8YM4gw.J8igQk3hRH0fVXHsrCdWsHpuj-zkp2L5jS6Y3ixzjsc&dib_tag=se&keywords=pet&qid=1734716735&sprefix=pet%2Caps%2C481&sr=8-17&xpid=q3mM6BNkBuqov">PetDroid Interactive Dog Toys Dog Ball</a>
+                <p>Durable Motion Activated Automatic Rolling Ball Toys for/Small/Medium/Large Dogs,USB Rechargeable (Orange)</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/pet-bottle-foodbox.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/Portable-Dispenser-Detachable-Container-Cibaabo/dp/B09F5ZYV7M/ref=sr_1_22_sspa?crid=2UFGK6LODBVTY&dib=eyJ2IjoiMSJ9.z_KBo583vdxHQ6diKykPB6Q5CbaN5546HbPpQ7lwvJkrwJjYVav2LdM91UeVirXi-NI95F4CpsykS_PnDTTyb-83UzovKhhas7FV3mvwnMcpvcOM8Tc-n0t5eYvrPeSn3PHBUMNceoPb1VDgGwQ0o66xrbBleZm5YxDlZmfyDrW5IBtr6sYgCY7dkCm2LL78qXfYzX7WQ8UTs2o-O2rta3ID_mIt1E4Vp4zonk9lXu4.RXhEBwQI5BWHenB5GVgSWNki_wZtGiewhLYnXbcHnls&dib_tag=se&keywords=pet&qid=1734716860&sprefix=pet%2Caps%2C362&sr=8-22-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9idGY&psc=1">Dog Water Bottle & Treat Container</a>
+                <p>Dog Water Bottle with Food Container, Travel Puppy Water Bowl, Portable Pet Dispenser, Dog Stuff Accessories Items, Puppy Essentials</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/pet-bath-kit.webp" alt="">
+            </div>
+            <div class="content">
+                <a href="https://www.amazon.com/Patterns-Adjustable-Suitable-Cleaning-Connector/dp/B0CBK6MMSL/ref=sr_1_43_sspa?crid=1DWIGZ2H9ULJB&dib=eyJ2IjoiMSJ9.RAz18C7kdYapDQppMjGGx84GNOnbxSjnF9mIOT1T1h_Dnfc-Pj_y9t9z-6mnTv08p5zmX2CmcjOgyFLVNroW9fE59f7ZTD8QrYYJfgcIABRx77meBEkesUPbi5BVe6dWMzB-A5koDXCQXGkLmFdmdUhTck8DP3RIrVqPe2LTnH-PKtp63fC1t9ubWOnCmun2BC50z_M3mfYo5hchv0hhimc7GWqBKUmUgyCDS0x4Xbk.BdpC_58aTesZTJzPbwT4Lk_pAptI-FSalhVHrQcI3Ks&dib_tag=se&keywords=pet&qid=1734717099&sprefix=pet%2Caps%2C409&sr=8-43-spons&xpid=gvhmhbqOr9loR&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&psc=1">Pet Bathing Sprayer Kit,</a>
+                <p>10 Spray Patterns, Adjustable Hose Wash Sprayer with 4 to 8 Bars Foam Blaster,Suitable for Pet Washing, Car Cleaning and Garden Use with 1/2” Quick Connector</p>
+            </div>
+        </div>
+
+        
+    </div>
+
+</section>
+
+
+
+<!-- <footer>
+    <h3>&copy; 2024 Your Pet Family.All rights reserved.</h3>
+</footer> -->
+
+    <!--customs js file link-->
+    <script src="../static/js/script.js"></script>
+</body>
+</html>

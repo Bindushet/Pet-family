@@ -1,0 +1,245 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Family</title>
+
+    <!--font aweson cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!--coustom scc file-->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+
+</head>
+<body>
+    <!--header section starts-->
+    <header class="header">
+
+        <a href="user_home.html" class="logo"><i class="fas fa-paw"></i>Pet Family</a>
+
+        <nav class="navbar">
+            <a href="user_home.html">Home </a>
+            <a href="adopt.html">Adopt</a>
+            <a href="food.html">Food</a>
+            <a href="shop.html">shop</a>
+            <a href="#about">about</a>
+            <a href="#contact">contact</a>
+
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div> 
+            <a href="shop.html" class="fas fa-shopping-cart"></a>
+            <div class="fas fa-user" id="login-btn"></div> 
+        </div>
+
+        <!-- <form action="" class="login-form">
+            <h3>sign out</h3>
+            <p>Username:{{J_data}}</p>
+            <a href="index.html" ><input type="submit" value="sign out"class="btn"></a>
+            
+            <div class="links">
+                <a href="#">forget password</a>
+                <a href="signup.html">sign up</a>
+                </div>
+        </form> -->
+        <form action="{% url 'logout' %}" method="post" class="login-form">
+            {% csrf_token %}
+            <h3>sign out</h3>
+            <input type="submit" value="sign out" class="btn">
+        </form>
+    </header>
+<!--header section ends-->
+
+<!-- home section starts -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3> <span>hi</span> welcome to our pet family</h3>
+        <a href="adopt.html" class="btn">adopt now</a>
+    </div>
+
+    <!-- <img src="resource/image/waveimage.png" class="wave"alt=""> -->
+
+</section>
+
+<!-- home section ends -->
+
+<!-- adopt section starts -->
+
+<section class="adopt">
+
+    <div class="pet-cards">
+        <div class="pet-card">
+            <div class="image">
+                <img src="../static/resource/image/pug-dog1.png" alt="Featured Pet 1">
+            </div>
+            <div class="content">
+                <h3>Hulfy</h3>
+                <p>Pug Dog</p>
+                <a href="adopt.html" class="btn">Adopt Me</a>
+            </div>
+        </div>
+        <div class="pet-card">
+            <div class="image">
+                <a href="#"><img src="../static/resource/image/siamese-cat.png" alt="Featured Pet 2"></a>
+            </div>
+            <div class="content">
+                <h3>Loafy</h3>
+                <p>Siamese Cat</p>
+                <a href="adopt.html" class="btn">Adopt Me</a>
+            </div>
+        </div>
+        <div class="pet-card">
+            <div class="image">
+                <a href="#"><img src="../static/resource/image/orange-cat.png" alt="Featured Pet 3"></a>
+            </div>
+            <div class="content">
+                <h3>Simba</h3>
+                <p>Persian Cat</p>
+                <a href="adopt.html" class="btn">Adopt Me</a>
+            </div>    
+        </div>
+    </div>
+</section>
+
+<!-- adopt section ends -->
+
+<!-- dog and cat food banner section starts -->
+
+<section class="food">
+    <!-- <h2>Food Section</h2> -->
+    <div class="dog-food">
+
+        <div class="image">
+            <img src="../static/resource/image/dog-food.jpg" alt="" >
+        </div>
+        <div class="content">
+            <h3><span>Delicious and healthy meals tailored for dogs.</span></h3>
+            <p>Give your dog the best with food that supports their energy and well-being. Made with quality ingredients, it promotes a shiny coat and strong muscles. We have a variety of dog food options—click "shop now" to find the perfect match for your furry friend's needs</p>
+            <a href="food.html" class="btn" >Shop now</a>
+        </div>
+
+    </div>
+    <div class="cat-food">
+
+        <div class="content">
+            <h3><span>Tasty meals designed for your cat's well-being.</span></h3>
+            <p>Treat your cat to the finest meals that keep them active and content. Crafted with premium ingredients, our food helps maintain a healthy coat and balanced lifestyle. Explore our range of cat food options—click "Shop now" to discover the perfect choice for your feline companion's unique needs.</p>
+            <a href="food.html" class="btn" >Shop now</a>
+        </div>
+        <div class="image">
+            <img src="../static/resource/image/cat-food.jpg" alt="" >
+        </div>
+
+    </div>
+</section>
+<!-- dog and cat food banner section ends -->
+
+<!-- shop section starts -->
+
+<!-- shop section starts -->
+
+<section class="shop" id="shop">
+
+    <h1 class="heading"><span>pet products</span> are </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/product01.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Depets Self Cleaning Slicker Brush, Pet Grooming Shedding Brush for Dogs and Cats </h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/product02.png" alt="">
+            </div>
+            <div class="content">
+                <h3>ZOIVANE Dog Bath Brush</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+
+            <div class="image">
+                <img src="../static/resource/image/product3.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Himalaya Erina Ep Shampoo For Dogs And Cats</h3>
+            </div>
+        </div>
+
+        <div class="readmore">
+            <a href="shop.html" class="btn">Shop now</a>
+        </div>
+        
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<section class="about" id="about">
+
+    <div class="image">
+        <img src="../static/resource/image/aboutimagevect.png" alt="" >
+    </div>
+
+    <div class="content">
+        <h3>Welcome to <span>pet Family</span>!</h3>
+        <p> Your go-to destination for pet adoption, care, and top-quality products. We help loving families connect with pets seeking forever homes while offering essential pet care items, including food, toys, and grooming products. Our mission is to support pet parents with trusted resources and products to keep their furry friends happy and healthy. Join our community and give your pets the love and care they deserve!</p>
+        <!-- <a href="#" class="btn">Read more</a> -->
+    </div>
+</section>
+<!-- about section ends -->
+
+<section class="contact" id="contact">
+    <div class="image">
+        <img src="../static/resource/image/contactimage1.jpg" alt="" >
+    </div>
+    <form action="">
+        <h3>contact us</h3>
+        <input type="text" placeholder="your name" class="box">
+        <input type="email" placeholder="your email" class="box">
+        <input type="tel" placeholder="your number" class="box">
+        <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="send message" class="btn">
+    </form>
+</section>
+
+<footer>
+    <h3>&copy; 2024 Your Pet Family.All rights reserved.</h3>
+</footer>
+
+    <!--customs js file link-->
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
