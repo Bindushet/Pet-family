@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'new_pet_db',
-        'USER': 'postgres',
-        'PASSWORD': 'biNdu4',
+        'USER': 'your_pgadmin_username',
+        'PASSWORD': 'your_password',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -122,8 +122,8 @@ EMAIL_HOST = 'smtp.gmail.com'  # Use your email provider's SMTP server
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL=False
-EMAIL_HOST_USER = 'bsshet04@gmail.com'  # Your email address
-EMAIL_HOST_PASSWORD = 'wuwk ackv oebo mxdj'  # Your email password or app-specific password
+EMAIL_HOST_USER = 'admin123@gmail.com'  # Your email address
+EMAIL_HOST_PASSWORD = '#### #### ####'  # Your email password or app-specific password
 
 
 # Static files (CSS, JavaScript, Images)
@@ -139,4 +139,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
